@@ -1,0 +1,96 @@
+:root {
+  --color-principal: #333;
+  --fuente-principal: Arial, sans-serif;
+  --color-rojo: #FF0000;
+  --color-gris-claro: #E8E8E8;
+  --color-gris-medio: #C0C0C0;
+  --color-gris-oscuro: #A0A0A0;
+  --color-blanco: #F4F4F4;
+  --color-azul: #0000FF; /* Aquí creo la variable azul */
+}
+
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Aquí aplico la fuente Roboto */
+  color: var(--color-principal);
+  background-image : url("./img/fondo.jpg"); /* Aquí uso una imagen de fondo para el cuerpo */
+  background-size : cover; /* Aquí ajusto el tamaño de la imagen al cuerpo */
+}
+
+header{
+  text-align: center;
+  color: var(--color-principal);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  color: var(--color-rojo);
+  font-family: 'Roboto', sans-serif; /* Aquí aplico la fuente Roboto */
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+p {
+  color: var(--color-gris-oscuro);
+  font-family: 'Roboto', sans-serif; /* Aquí aplico la fuente Roboto */
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: var(--color-rojo);
+  color: var(--color-blanco);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;  
+  transition: all .5s; /* Aquí reduzco la duración de la transición */
+}
+button:hover{
+    background-color: var(--color-gris-claro);
+    color: var(--color-principal);
+}
+
+.container {
+    background-image:url("./img/Principal.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow : inset -10px -10px -10px rgba(0,0,0,.5); /* Aquí cambio la sombra a una sombra interior */
+    transition : all .5s ease; /* Aquí reduzco la duración de la transición */
+    margin: 0 auto;
+
+    display:flex; /* Aquí aplico el flexbox */
+    flex-direction : column; /* Aquí especifico que los elementos se ordenen en una columna */
+    justify-content : center; /* Aquí centro los elementos a lo largo del eje principal */
+    align-items : center; /* Aquí centro los elementos a lo largo del eje secundario */
+
+    filter : blur(2px) opacity(.8); /* Aquí aplico el filtro de desenfoque y opacidad a la imagen de fondo */
+}
+.container:hover {
+    transform : rotate(1deg) scale(1); /* Aquí aplico la transformación */
+    box-shadow : inset -20px -20px -20px rgba(0,0,0,.5); /* Aquí aumento la intensidad de la sombra interior */
+    filter : blur(0px) opacity(1); /* Aquí quito el filtro de desenfoque y opacidad a la imagen de fondo */
+}
+
+/* Aquí empieza el estilo de vidrio y cristales */
+
+h1, p, button, header {
+    backdrop-filter : blur(10px); /* Aquí aplico un filtro de desenfoque al fondo detrás del texto, el botón y el encabezado */
+    -webkit-backdrop-filter : blur(10px); /* Aquí uso el prefijo para los navegadores webkit */
+    opacity : .9; /* Aquí reduzco la opacidad del texto, el botón y el encabezado para crear un efecto de transparencia */
+}
+
+.container {
+    backdrop-filter : blur(10px); /* Aquí aplico un filtro de desenfoque al fondo detrás del contenedor */
+    -webkit-backdrop-filter : blur(10px); /* Aquí uso el prefijo para los navegadores webkit */
+    opacity : .9; /* Aquí reduzco la opacidad del contenedor para crear un efecto de transparencia */
+}
